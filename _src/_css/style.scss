@@ -43,65 +43,94 @@
 	}
 
 
+/* Variable
+   ========================================================================== */
+	$primary-color: #000;
 
-$primary-color: #000;
 
-body {
-	font-family: 'Roboto', 'Noto', sans-serif;
-	font-size: 1.4em;
-}
-
-.header {
-	border-bottom: 2px solid $primary-color;
-	nav ul {
-		padding-left: 0;
-		list-style-type: none;
+/* CSS
+   ========================================================================== */
+	body {
+		font-family: 'Roboto', 'Noto', sans-serif;
+		font-size: 1.4em;
 	}
-	nav > ul {
+
+	a {
+		color: $primary-color;
+		text-decoration: none;
+	}
+	a:hover, 
+	a:focus,
+	a:active {
+		color: red
+	}
+
+	.header {
+		.menu {
+			display: flex;
+			text-align: center;
+			margin: 0;
+		}
+		.menu > li {
+			position: relative;
+		}
+		.menu > li > a {
+			display: block;
+			padding: 5px 0;
+			border-bottom: 2px solid $primary-color;
+		}
+		.menu > li:nth-child(1), 
+		.menu > li:nth-child(4) {
+			flex: 1;
+		}
+		.menu > li:nth-child(2)  {
+			flex: 4;
+		}
+		.menu > li:nth-child(3) {
+			flex: 2;
+		}
+		.menu > li:not(:last-child) {
+			border-right: 2px solid $primary-color;
+		}
+
+		/* Hover submenu */
+		.submenu {
+			display: none;
+		}
+		.menu > li:hover ul {
+			position: absolute;
+			top: auto;
+			width: 100%;
+			padding: 5px 0;
+			border-bottom: 2px solid $primary-color;
+			background-color: white;
+		}
+		.menu > li:first-child:hover ul,
+		.menu > li:first-child:hover ul > li {
+			display: block;
+		}
+		.menu > li:nth-child(2):hover ul {
+			display: flex;
+		}
+		.menu > li:nth-child(2):hover ul > li {
+			display: inline-block;
+			flex: 1;
+		}
+	}
+
+	.content {
 		display: flex;
-		text-align: center;
-		margin: 0;
-	}
-	nav > ul > li {
-		padding: 15px 0;
-	}
-	.actus  {
-		flex: 4;
-	}
-	.portraits {
-		flex: 2;
-	}
-	.home, .clefs {
-		flex: 1;
-	}
-	nav > ul > li:not(:last-child) {
-		border-right: 2px solid $primary-color;
-	}
+		.content_article {
+			flex: 4;
+			border-left: 2px solid $primary-color;
+			border-right: 2px solid $primary-color;
+		}
+		.content_portrait {
+			flex: 2;
+			border-right: 2px solid $primary-color;
+		}
 
-	nav ul ul {
-		display: none;
+		.content_col-empty {
+			flex: 1;
+		}
 	}
-	nav > ul > li:hover ul {
-		display: block;
-	}
-	nav > ul > li:hover ul > li {
-		display: inline-block;
-	}
-}
-
-.content {
-	display: flex;
-	.list-article {
-		flex: 4;
-		border-left: 2px solid $primary-color;
-		border-right: 2px solid $primary-color;
-	}
-	.list-portrait {
-		flex: 2;
-		border-right: 2px solid $primary-color;
-	}
-
-	.content_col-empty {
-		flex: 1;
-	}
-}

@@ -3,24 +3,26 @@ layout: default
 title: Meltingbook
 ---
 
-<section class="list-article">
-	{% for post in site.posts %}
-        <div>
-            <h3>{{ post.title }} <small>{{post.date | date_to_string }}</small></h3>
-            <p>{{post.excerpt}}</p>
-            <p><a href="{{site.url}}{{post.url}}" class="btn btn-default">Lire plus</a></p>
-        </div>
+<section class="content_article">
+    {% for post in site.tags.article %}
+        <article>
+            <a href="{{site.url}}{{post.url}}">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.author }}</p>   
+            </a>
+        </article>
         <hr>
     {% endfor %}
 </section>
 
-<section class="list-portrait">
-	{% for post in site.posts %}
-        <div>
-            <h3>{{ post.title }} <small>{{post.date | date_to_string }}</small></h3>
-            <p>{{post.excerpt}}</p>
-            <p><a href="{{site.url}}{{post.url}}" class="btn btn-default">Lire plus</a></p>
-        </div>
+<section class="content_portrait">
+	{% for post in site.tags.portrait %}
+        <article>
+            <a href="{{site.url}}{{post.url}}">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.author }}</p>   
+            </a>
+        </article>
         <hr>
     {% endfor %}
 </section>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>{{page.title}}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="./dist/css/style.min.css">
+	</head>
+	<body>
+		{% include menu.html %}
+
+		<div class="content" role="main">
+			<div class="content_col-empty"></div>
+			<h1>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h1>
+            {{ content }}
+
+            <ul class="pager">
+                {% if page.previous %}
+                    <li class="previous"><a href="{{site.url}}{{ page.previous.url }}">&larr; {{ page.previous.title }} </a></li>
+                {% endif %}
+                {% if page.next %}
+                    <li class="next"><a href="{{site.url}}{{ page.next.url }}">{{ page.next.title }} &rarr;</a></li>
+                {% endif %}
+            </ul>
+			<div class="content_col-empty"></div>
+		</div>
+
+		{% include footer.html %}
+	</body>
+</html>

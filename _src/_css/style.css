@@ -16,6 +16,7 @@
    ========================================================================== */
 body {
   font-family: 'Helvetica', 'Roboto', sans-serif;
+  overflow-x: hidden;
   word-break: break-all;
   word-break: break-word;
   -ms-word-break: break-all;
@@ -47,19 +48,6 @@ em {
 
 img {
   max-width: 100%;
-}
-
-/* Font size */
-.menu li {
-  font-size: 1.8rem;
-  line-height: 100%;
-  letter-spacing: .025rem;
-}
-
-.content article * {
-  font-size: 1.45rem;
-  line-height: 125%;
-  letter-spacing: .025rem;
 }
 
 h1,
@@ -113,7 +101,10 @@ h6 {
 }
 
 .header .menu > li {
+  font-size: 1.8rem;
+  line-height: 100%;
   position: relative;
+  letter-spacing: .025rem;
 }
 
 .header .menu > li > a {
@@ -145,12 +136,16 @@ h6 {
 
 .header .menu > li:first-child:hover ul {
   display: block;
+  border-right: 2px solid #000;
 }
 
 .header .menu > li:nth-child(2):hover ul {
+  left: -2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
 }
 
 .header .menu > li:first-child ul > li {
@@ -217,12 +212,86 @@ h6 {
   width: 75%;
 }
 
+.content .list-article *,
+.content .list-portrait * {
+  font-size: 1.45rem;
+  line-height: 125%;
+  letter-spacing: .025rem;
+}
+
 .content .list-article article,
 .content .list-portrait article {
   margin-top: .625rem;
   margin-bottom: .625rem;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/* Article */
+.article {
+    /* prev/next */
+}
+
+.article header * {
+  font-size: 3rem;
+}
+
+.article .col-flex_primary,
+.article .col-flex_secondary {
+  border: 0;
+}
+
+.article .col-flex_extern img {
+  max-width: initial;
+}
+
+.article a.next,
+.article a.previous {
+  position: absolute;
+}
+
+.article a.next {
+  top: 160px;
+  right: -30%;
+}
+
+.article a.previous {
+  top: 100px;
+  left: -40%;
+}
+
+.article a.previous p {
+  position: relative;
+  right: 50px;
+  bottom: 55px;
+  display: inline-block;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  vertical-align: bottom;
+}
+
+.article_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article_content * {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.article_content:before {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article_content div {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 /* Custom scrollbar (surcharge)

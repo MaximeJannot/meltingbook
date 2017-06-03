@@ -8,26 +8,42 @@
 	<body>
 		{% include menu.html %}
 
-		<div class="content col-flex article" role="main">
-			<div class="col-flex_extern"></div>
+		<div class="col-flex article" role="main">
+			<div class="col-flex_extern">
+				{% if page.previous %}
+                    <a class="previous" href="{{site.url}}{{ page.previous.url }}">
+                    	<img src="{{ page.previous.urlimg }}">
+                    	<p>Page précédente </p>
+                	</a>
+                {% endif %}
+			</div>
 
 			<article class="col-flex_primary">
-				<h1>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h1>
 				<img src="{{ page.urlimg }}" alt="">
-	            {{ content }}
+				<header>
+					<h2>{{ page.title }}</h2>
+					<p aria-hidden>—</p>
+					<p>par {{ page.author }}</p>
+				</header>
 
-	            <ul class="pager">
-	                {% if page.previous %}
-	                    <li class="previous"><a href="{{site.url}}{{ page.previous.url }}">&larr; {{ page.previous.title }} </a></li>
-	                {% endif %}
-	                {% if page.next %}
-	                    <li class="next"><a href="{{site.url}}{{ page.next.url }}">{{ page.next.title }} &rarr;</a></li>
-	                {% endif %}
-	            </ul>
+				<div class="article_content">
+					<div>
+	            		{{ content }}		
+					</div>
+				</div>
 			</article>
 
 			<div class="col-flex_secondary"></div>
-			<div class="col-flex_extern"></div>
+
+			<div class="col-flex_extern">
+				{% if page.next %}
+                    <a class="next" href="{{site.url}}{{ page.next.url }}">
+                    	<p>Page suivante</p>
+                    	<img src="{{ page.next.urlimg }}">
+                    	<h2>{{ page.next.title }}</h2>
+                	</a>
+                {% endif %}
+			</div>
 		</div>
 
 		{% include footer.html %}

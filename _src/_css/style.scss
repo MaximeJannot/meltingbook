@@ -60,11 +60,19 @@
    ========================================================================== */
 	body {
 		font-family: 'Helvetica', 'Roboto', sans-serif;
+		-ms-word-break: break-all;
+		word-break: break-all;
+		// Non standard for webkit
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
 	}
 
 	a {
 		color: $primary-color;
 		text-decoration: none;
+	    transition: all .1s ease;
 	}
 	a:hover, 
 	a:focus,
@@ -114,9 +122,12 @@
 			position: relative;
 		}
 		.menu > li > a {
+			position: relative;
 			display: block;
 			padding: 5px 0;
+			background-color: white;
 			border-bottom: 2px solid $primary-color;
+			z-index: 1;
 		}
 		.menu > li:not(:last-child) {
 			border-right: 2px solid $primary-color;

@@ -1,6 +1,6 @@
 {
     "name": "meltingbook",
     "dependencies": {
-
+    	"perfect-scrollbar": "latest"
     }
 }

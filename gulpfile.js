@@ -11,7 +11,7 @@ var destination = './dist'; // dossier à livrer
 
 // Tâche "build" = sass + autoprefixer + CSScomb + beautify (source -> destination)
 gulp.task('minify-css', function () {
-  return gulp.src(source + '/_css/style.scss')
+  return gulp.src(source + '/_css/*.scss')
     .pipe(plugins.sass())
     .pipe(plugins.csscomb())
     .pipe(plugins.cssbeautify({indent: '  '}))
@@ -27,6 +27,14 @@ gulp.task('minify-js', function () {
     .pipe(uglify())
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest(destination + '/js/'));
+});
+
+// plugin custom scrollbar
+gulp.task('minify-customscrollbar', function () {
+    gulp.src('./components/perfect-scrollbar/js/*.js') // path to your files
+    .pipe(uglify())
+    .pipe(plugins.rename({suffix: '.min'}))
+    .pipe(gulp.dest('./components/perfect-scrollbar/js/minify/'));
 });
 
 // Tâche "watch" = je surveille *sass

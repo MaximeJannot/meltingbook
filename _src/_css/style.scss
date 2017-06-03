@@ -100,7 +100,7 @@
 	.col-flex_primary>*,
 	.col-flex_secondary>*,
 	.col-flex_extern>* {
-		padding: 10px;
+		padding: 0.625rem;
 	}
 	.col-flex_primary {
 		flex: 4;
@@ -189,16 +189,19 @@
 					vertical-align: top;
 				}
 				div {
-					width: calc(25% - 10px);
+					width: calc(25% - 0.625rem);
 					display: inline-block;
 					vertical-align: top;
-					padding-left: 10px;
+					padding-left: 0.625rem;
 				}
 			}
 		}
 		.list-portrait {
 			article {
 				display: block;
+				img {
+					max-width: 100%;
+				}
 				h2 {
 					width: 75%;
 				}
@@ -208,7 +211,7 @@
 		.list-portrait article {
 			padding-top: 0;
 			padding-bottom: 0;
-			margin-top: 10px;
-			margin-bottom: 10px;
+			margin-top: 0.625rem;
+			margin-bottom: 0.625rem;
 		}
 	}

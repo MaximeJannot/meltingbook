@@ -187,7 +187,7 @@ a:active {
 .col-flex_primary > *,
 .col-flex_secondary > *,
 .col-flex_extern > * {
-  padding: 10px;
+  padding: .625rem;
 }
 
 .col-flex_primary {
@@ -308,13 +308,17 @@ a:active {
 
 .content .list-article a div {
   display: inline-block;
-  width: calc(25% - 10px);
-  padding-left: 10px;
+  width: calc(25% - .625rem);
+  padding-left: .625rem;
   vertical-align: top;
 }
 
 .content .list-portrait article {
   display: block;
+}
+
+.content .list-portrait article img {
+  max-width: 100%;
 }
 
 .content .list-portrait article h2 {
@@ -323,8 +327,8 @@ a:active {
 
 .content .list-article article,
 .content .list-portrait article {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: .625rem;
+  margin-bottom: .625rem;
   padding-top: 0;
   padding-bottom: 0;
 }

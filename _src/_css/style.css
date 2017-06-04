@@ -248,6 +248,10 @@ h6 {
   width: 75%;
 }
 
+.content .list-portrait img {
+  max-width: 350px;
+}
+
 .content .list-article article,
 .content .list-portrait article {
   margin-top: .625rem;
@@ -281,6 +285,11 @@ h6 {
 .article img {
   width: 760px;
   max-width: calc(100% - 20px);
+}
+
+.article header,
+.article .article_content {
+  margin-bottom: 4rem;
 }
 
 .article .col-flex_extern img {
@@ -317,6 +326,7 @@ h6 {
 }
 
 .article_content {
+  line-height: 1.5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

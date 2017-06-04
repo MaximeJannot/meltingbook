@@ -205,6 +205,9 @@
 				h2 {
 					width: 75%;
 				}
+			} 
+			img {
+				max-width: 350px;
 			}
 		}
 		.list-article article,
@@ -237,6 +240,11 @@
 			max-width: calc(100% - 20px);
 		}
 
+		header,
+		.article_content {
+			margin-bottom: 4rem;
+		}
+
 		/* prev/next */
 		.col-flex_extern img {
 			max-width: initial;
@@ -267,6 +275,7 @@
 	}
 	.article_content {
 		display: flex;
+		line-height: 1.5;
 		&:before {
 			content: "";
 			flex: 1;

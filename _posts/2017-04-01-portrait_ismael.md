@@ -3,7 +3,7 @@ layout: article
 categories: portrait
 title: Ismaël, kid codeur à 12 ans
 author: Sarah Hamdi
-urlimg: http://www.meltingbook.com/wp-content/uploads/2017/04/Ismael_FB-365x280.jpg
+urlimg: http://www.meltingbook.com/wp-content/uploads/2017/04/Ismael_FB-756x425.jpg
 ---
 
 **Ismaël, collégien et Youtubeur, apprend aux jeunes à coder en ligne. Une initiative utile et ludique. Rencontre.**

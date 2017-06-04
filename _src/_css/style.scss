@@ -57,6 +57,27 @@
 		font-weight: normal;
 	}
 
+	/* Font-size */
+	.article header *,
+	.article .next h2,
+	.article .previous h2 {
+		font-size: 3rem;
+	}
+	.menu > li {
+		font-size: 1.8rem;
+	}
+	.list-article *,
+	.list-portrait *,
+	.article .next p,
+	.article .previous p {
+		font-size: 1.45rem;
+		letter-spacing: 0.025rem;
+	}
+	.article_content * {
+		font-size: 1rem;
+		letter-spacing: 0.06em;
+	}
+
 	/* Grille */
 	.col-flex {
 		display: flex;
@@ -84,7 +105,6 @@
 		}
 		.menu > li {
 			position: relative;
-			font-size: 1.8rem;
 			line-height: 100%;
 			letter-spacing: 0.025rem;
 		}
@@ -133,6 +153,16 @@
 		.menu > li:nth-child(2) ul > li[aria-hidden] {
 			flex: 1;
 		}
+
+		@media screen and (max-width: 1300px) {
+			.menu > li {
+				flex: 1;
+			}
+			.menu>li:nth-child(2):hover ul,
+			.menu>li:nth-child(2):hover ul li {
+				display: block;
+			}
+		}
 	}
 
 	/* Content */
@@ -177,12 +207,6 @@
 				}
 			}
 		}
-		.list-article *,
-		.list-portrait * {
-			font-size: 1.45rem;
-			line-height: 125%;
-			letter-spacing: 0.025rem;
-		}
 		.list-article article,
 		.list-portrait article {
 			padding-top: 0;
@@ -190,16 +214,27 @@
 			margin-top: 0.625rem;
 			margin-bottom: 0.625rem;
 		}
+
+		@media screen and (max-width: 1300px) {
+			.col-flex_extern {
+				flex: 0;
+			}
+		}
 	}
 
 	/* Article */
 	.article {
-		header * {
-			font-size: 3rem;
-		}
 		.col-flex_primary, 
 		.col-flex_secondary {
 			border: 0;
+		}
+		.col-flex_extern {
+			position: relative;
+		}
+
+		img {
+			width: 760px;
+			max-width: calc(100% - 20px);
 		}
 
 		/* prev/next */
@@ -212,27 +247,26 @@
 		}
 		a.next {
 			top: 160px;
-    		right: -30%;
+    		left: -45%;
+    		p {
+    			margin-bottom: 0.625rem;
+    		}
 		}
 		a.previous {
 			top: 100px;
-    		left: -40%;
+    		right: 42%;
     		p {
-				transform: rotate(-90deg);
+				position: absolute;
+			    right: -14%;
+    			bottom: 22%;
 				display: inline-block;
+				transform: rotate(-90deg);
 				vertical-align: bottom;
-				position: relative;
-				right: 50px;
-				bottom: 55px;
     		}
 		}
 	}
 	.article_content {
 		display: flex;
-		* {
-			font-size: 1rem;
-			line-height: normal;	
-		}
 		&:before {
 			content: "";
 			flex: 1;

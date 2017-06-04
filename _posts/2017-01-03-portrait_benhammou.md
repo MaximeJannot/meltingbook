@@ -3,7 +3,7 @@ layout: article
 categories: portrait
 title: 'Clément Ben Hammou : « On veut montrer que le bio est accessible à tous »'
 author: Sarah Hamdi
-urlimg: http://www.meltingbook.com/wp-content/uploads/2017/03/Photo-CBH-365x280.jpg
+urlimg: http://www.meltingbook.com/wp-content/uploads/2017/03/Photo-CBH-756x425.jpg
 ---
 
 **Co-fondateur de « Label place », Clément Ben Hammou veut faire du bio et du sans gluten des produit que chacun d’entre nous peut avoir dans son assiette.**

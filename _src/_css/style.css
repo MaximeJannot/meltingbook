@@ -59,6 +59,30 @@ h6 {
   font-weight: normal;
 }
 
+/* Font-size */
+.article header *,
+.article .next h2,
+.article .previous h2 {
+  font-size: 3rem;
+}
+
+.menu > li {
+  font-size: 1.8rem;
+}
+
+.list-article *,
+.list-portrait *,
+.article .next p,
+.article .previous p {
+  font-size: 1.45rem;
+  letter-spacing: .025rem;
+}
+
+.article_content * {
+  font-size: 1rem;
+  letter-spacing: .06em;
+}
+
 /* Grille */
 .col-flex {
   display: -webkit-box;
@@ -101,7 +125,6 @@ h6 {
 }
 
 .header .menu > li {
-  font-size: 1.8rem;
   line-height: 100%;
   position: relative;
   letter-spacing: .025rem;
@@ -165,6 +188,19 @@ h6 {
           flex: 1;
 }
 
+@media screen and (max-width: 1300px) {
+  .header .menu > li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
+  .header .menu > li:nth-child(2):hover ul,
+    .header .menu > li:nth-child(2):hover ul li {
+    display: block;
+  }
+}
+
 /* Content */
 .content .col-flex_primary {
   border-right: 2px solid #000;
@@ -212,13 +248,6 @@ h6 {
   width: 75%;
 }
 
-.content .list-article *,
-.content .list-portrait * {
-  font-size: 1.45rem;
-  line-height: 125%;
-  letter-spacing: .025rem;
-}
-
 .content .list-article article,
 .content .list-portrait article {
   margin-top: .625rem;
@@ -227,18 +256,31 @@ h6 {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  .content .col-flex_extern {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+}
+
 /* Article */
 .article {
     /* prev/next */
 }
 
-.article header * {
-  font-size: 3rem;
-}
-
 .article .col-flex_primary,
 .article .col-flex_secondary {
   border: 0;
+}
+
+.article .col-flex_extern {
+  position: relative;
+}
+
+.article img {
+  width: 760px;
+  max-width: calc(100% - 20px);
 }
 
 .article .col-flex_extern img {
@@ -252,18 +294,22 @@ h6 {
 
 .article a.next {
   top: 160px;
-  right: -30%;
+  left: -45%;
+}
+
+.article a.next p {
+  margin-bottom: .625rem;
 }
 
 .article a.previous {
   top: 100px;
-  left: -40%;
+  right: 42%;
 }
 
 .article a.previous p {
-  position: relative;
-  right: 50px;
-  bottom: 55px;
+  position: absolute;
+  right: -14%;
+  bottom: 22%;
   display: inline-block;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -274,11 +320,6 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.article_content * {
-  font-size: 1rem;
-  line-height: normal;
 }
 
 .article_content:before {

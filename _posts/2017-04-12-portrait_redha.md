@@ -3,7 +3,7 @@ layout: article
 categories: portrait
 title: Redha Benabdallah, l’oudiste à cordes égales
 author: Yousra Gouja
-urlimg: http://www.meltingbook.com/wp-content/uploads/2017/04/FB_IMG_1491166617681-365x280.jpg
+urlimg: http://www.meltingbook.com/wp-content/uploads/2017/04/FB_IMG_1491166617681-756x425.jpg
 ---
 
 **Redha Benabdallah, musicien, a reçu le premier prix de Kwitra lors  du Festival International des Musiques Anciennes et Andalouses d’Alger. Rencontre avec un prodige du oud.**

@@ -34,7 +34,7 @@
 	a {
 		color: $primary-color;
 		text-decoration: none;
-	    transition: all .1s ease;
+	    transition: all .1s ease-in-out;
 	}
 	a:hover, 
 	a:focus,
@@ -49,8 +49,21 @@
 		font-family: 'HelveticaItalic', 'Roboto', sans-serif;
 	}
 
-	img {
+	a img {
 		max-width: 100%;
+		filter: grayscale(1);
+	    transition: all 0.3s ease-in-out;
+        // -webkit-filter: grayscale(1);
+        // -moz-filter: grayscale(1);
+        // -o-filter: grayscale(1);
+        // -ms-filter: grayscale(1);
+	}
+	a:hover img {
+		filter: grayscale(0);
+        // -webkit-filter: grayscale(0);
+        // -moz-filter: grayscale(0);
+        // -o-filter: grayscale(0);
+        // -ms-filter: grayscale(0);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -63,19 +76,20 @@
 	.article .previous h2 {
 		font-size: 3rem;
 	}
-	.menu > li {
-		font-size: 1.8rem;
-	}
-	.list-article *,
-	.list-portrait *,
+	.menu > li,
 	.article .next p,
 	.article .previous p {
-		font-size: 1.45rem;
-		letter-spacing: 0.025rem;
+		font-size: 1.6rem;
+	}
+	.list-article *,
+	.list-portrait * {
+		font-size: 1.25rem;
+		letter-spacing: 0.028rem;
+		line-height: 1.6rem;
 	}
 	.article_content * {
 		font-size: 1rem;
-		letter-spacing: 0.06em;
+		letter-spacing: 0.04em;
 	}
 
 	/* Grille */
@@ -124,6 +138,7 @@
 		.submenu {
 			display: none;
 			z-index: 1;
+			line-height: 2.6rem;
 		}
 		.menu > li:hover ul {
 			position: absolute;
@@ -206,9 +221,6 @@
 					width: 75%;
 				}
 			} 
-			img {
-				max-width: 350px;
-			}
 		}
 		.list-article article,
 		.list-portrait article {
@@ -235,18 +247,22 @@
 			position: relative;
 		}
 
-		img {
-			width: 760px;
-			max-width: calc(100% - 20px);
+		.col-flex_primary {
+			img {
+				width: 100%;
+				max-width: calc(100% - 20px);
+			}
 		}
 
 		header,
 		.article_content {
 			margin-bottom: 4rem;
+			margin-right: 4.5rem;
 		}
 
 		/* prev/next */
 		.col-flex_extern img {
+			width: 760px;
 			max-width: initial;
 		}
 		a.next,
@@ -259,14 +275,20 @@
     		p {
     			margin-bottom: 0.625rem;
     		}
+    		img {
+    			padding-bottom: 10px;
+    		}
+    		h2 {
+    			padding-top: 10px;
+    		}
 		}
 		a.previous {
 			top: 100px;
     		right: 42%;
     		p {
 				position: absolute;
-			    right: -14%;
-    			bottom: 22%;
+			    right: -14.6%;
+    			bottom: 23%;
 				display: inline-block;
 				transform: rotate(-90deg);
 				vertical-align: bottom;

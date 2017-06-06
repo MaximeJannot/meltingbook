@@ -26,8 +26,8 @@ body {
 }
 
 a {
-  -webkit-transition: all .1s ease;
-  transition: all .1s ease;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   text-decoration: none;
   color: #000;
 }
@@ -46,8 +46,17 @@ em {
   font-family: 'HelveticaItalic', 'Roboto', sans-serif;
 }
 
-img {
+a img {
   max-width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+a:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 h1,
@@ -66,21 +75,22 @@ h6 {
   font-size: 3rem;
 }
 
-.menu > li {
-  font-size: 1.8rem;
+.menu > li,
+.article .next p,
+.article .previous p {
+  font-size: 1.6rem;
 }
 
 .list-article *,
-.list-portrait *,
-.article .next p,
-.article .previous p {
-  font-size: 1.45rem;
-  letter-spacing: .025rem;
+.list-portrait * {
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+  letter-spacing: .028rem;
 }
 
 .article_content * {
   font-size: 1rem;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
 }
 
 /* Grille */
@@ -144,6 +154,7 @@ h6 {
 }
 
 .header .submenu {
+  line-height: 2.6rem;
   z-index: 1;
   display: none;
 }
@@ -248,10 +259,6 @@ h6 {
   width: 75%;
 }
 
-.content .list-portrait img {
-  max-width: 350px;
-}
-
 .content .list-article article,
 .content .list-portrait article {
   margin-top: .625rem;
@@ -282,17 +289,19 @@ h6 {
   position: relative;
 }
 
-.article img {
-  width: 760px;
+.article .col-flex_primary img {
+  width: 100%;
   max-width: calc(100% - 20px);
 }
 
 .article header,
 .article .article_content {
+  margin-right: 4.5rem;
   margin-bottom: 4rem;
 }
 
 .article .col-flex_extern img {
+  width: 760px;
   max-width: initial;
 }
 
@@ -310,6 +319,14 @@ h6 {
   margin-bottom: .625rem;
 }
 
+.article a.next img {
+  padding-bottom: 10px;
+}
+
+.article a.next h2 {
+  padding-top: 10px;
+}
+
 .article a.previous {
   top: 100px;
   right: 42%;
@@ -317,8 +334,8 @@ h6 {
 
 .article a.previous p {
   position: absolute;
-  right: -14%;
-  bottom: 22%;
+  right: -14.6%;
+  bottom: 23%;
   display: inline-block;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);

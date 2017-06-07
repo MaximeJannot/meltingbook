@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: portrait
-title: Redha Benabdallah, l’oudiste à cordes égales
+title: Redha Benabdallah, <br/>l’oudiste à cordes égales
 author: Yousra Gouja
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/04/FB_IMG_1491166617681-756x425.jpg
 ---

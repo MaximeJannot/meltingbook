@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: portrait
-title: Fatoumata Kebe, « space girl » devenue docteure en astronomie
+title: Fatoumata Kebe, <br/>« space girl » devenue docteure en astronomie
 author: Sarah Hamdi
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/01/fATOUMATA-KEBE-OK-756x425.png
 ---

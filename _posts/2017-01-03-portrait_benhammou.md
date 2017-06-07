@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: portrait
-title: 'Clément Ben Hammou : « On veut montrer que le bio est accessible à tous »'
+title: 'Clément Ben Hammou : <br/>« On veut montrer que le bio est accessible à tous »'
 author: Sarah Hamdi
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/03/Photo-CBH-756x425.jpg
 ---

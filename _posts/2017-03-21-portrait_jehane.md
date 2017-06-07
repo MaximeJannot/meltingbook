@@ -1,7 +1,7 @@
 ---
 layout: article
 categories: portrait
-title: Jehane Bensedira, haut fonctionnaire par vocation
+title: Jehane Bensedira, <br/>haut fonctionnaire par vocation
 author: Sarah Hamdi
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/03/Jehan-B.-portrait-638x425
 ---

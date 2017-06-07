@@ -3,7 +3,7 @@ layout: article
 categories:
 - article
 - politique
-title: Législatives 2017. Les candidats sans étiquette inquiètent
+title: Législatives 2017. <br/>Les candidats sans étiquette inquiètent
 author: Sarah Hamdi
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/05/Capture-d’écran-2017-05-30-à-12.15.06-756x350.png
 ---

@@ -3,7 +3,7 @@ layout: article
 categories:
 - article
 - culture
-title: L’artiste Maya-Inès Touam poétise ce voile si politique
+title: L’artiste Maya-Inès Touam <br/>poétise ce voile si politique
 author: Nadia Henni-Moulaï
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/05/revelerletoffe-756x425.png
 ---

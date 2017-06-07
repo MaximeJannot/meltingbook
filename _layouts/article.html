@@ -10,10 +10,10 @@
 
 		<div class="col-flex article" role="main">
 			<div class="col-flex_extern">
-				{% if page.previous %}
-                    <a class="previous" href="{{site.url}}{{ page.previous.url }}">
-                    	<img src="{{ page.previous.urlimg }}">
-                    	<p>Article précédente </p>
+				{% if page.previous_in_category != nil %}
+                    <a class="previous" href="{{page.previous_in_category.url}}">
+                    	<img src="{{page.previous_in_category.urlimg}}">
+                    	<p>Article précédent </p>
                 	</a>
                 {% endif %}
 			</div>
@@ -30,17 +30,19 @@
 					<div>
 	            		{{ content }}		
 					</div>
+					<a href="" class="share-twitter">Partager sur Twitter</a>
+                	<a href="" class="share-facebook">Partager sur Facebook</a>
 				</div>
 			</article>
 
 			<div class="col-flex_secondary"></div>
 
 			<div class="col-flex_extern">
-				{% if page.next %}
-                    <a class="next" href="{{site.url}}{{ page.next.url }}">
-                    	<p>Article suivante</p>
-                    	<img src="{{ page.next.urlimg }}">
-                    	<h2>{{ page.next.title }}</h2>
+				{% if page.next_in_category != nil %}
+                    <a class="next" href="{{page.next_in_category.url}}">
+                    	<p>Article suivant</p>
+                    	<img src="{{page.next_in_category.urlimg}}">
+                    	<h2>{{page.next_in_category.title}}</h2>
                 	</a>
                 {% endif %}
 			</div>

@@ -38,6 +38,47 @@ a:active {
   color: red;
 }
 
+.share-twitter,
+.share-facebook {
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  background-position: center;
+  background-size: contain;
+}
+
+.liste-article .share-twitter,
+.liste-article .share-facebook {
+  bottom: 0;
+}
+
+.liste-article .share-facebook {
+  left: calc(75% + 30px);
+  background-image: url(../../dist/img/facebook.jpg);
+}
+
+.liste-article .share-twitter {
+  left: 75%;
+  background-image: url(../../dist/img/twitter.jpg);
+}
+
+.article_content .share-twitter,
+.article_content .share-facebook {
+  top: .625rem;
+}
+
+.article_content .share-facebook {
+  left: calc(.625rem + 30px);
+  background-image: url(../../dist/img/facebook.jpg);
+}
+
+.article_content .share-twitter {
+  left: .625rem;
+  background-image: url(../../dist/img/twitter.jpg);
+}
+
 strong {
   font-family: 'HelveticaBold', 'Roboto', sans-serif;
 }
@@ -77,12 +118,14 @@ h6 {
 
 .menu > li,
 .article .next p,
-.article .previous p {
+.article .previous p,
+.menu-aside li {
   font-size: 1.6rem;
 }
 
 .list-article *,
-.list-portrait * {
+.list-portrait *,
+.list-keys * {
   font-size: 1.25rem;
   line-height: 1.6rem;
   letter-spacing: .028rem;
@@ -154,9 +197,16 @@ h6 {
 }
 
 .header .submenu {
-  line-height: 2.6rem;
   z-index: 1;
   display: none;
+}
+
+.header .submenu li {
+  line-height: normal;
+}
+
+.header .submenu li[aria-hidden] {
+  line-height: 2.6rem;
 }
 
 .header .menu > li:hover ul {
@@ -222,8 +272,7 @@ h6 {
   border-right: 2px solid #000;
 }
 
-.content .col-flex_primary,
-.content .col-flex_secondary {
+.content *[class*='col-flex_'] {
   position: relative;
   overflow: auto;
   min-height: calc(100vh - calc(1.8rem + 12px));
@@ -261,10 +310,41 @@ h6 {
 
 .content .list-article article,
 .content .list-portrait article {
+  position: relative;
   margin-top: .625rem;
   margin-bottom: .625rem;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.content .list-keys li {
+  display: inline-block;
+}
+
+.content .list-keys li:not(:last-child):after {
+  display: inline-block;
+  content: '-';
+}
+
+.content .menu-aside li {
+  line-height: 1.5;
+  text-align: center;
+}
+
+.content .menu-aside li[aria-hidden] {
+  line-height: 2.6rem;
+}
+
+.content .menu-aside .logoshop {
+  display: block;
+}
+
+.content .menu-aside .logoshop img {
+  max-width: calc(100% - .625rem);
+}
+
+.content .menu-aside .logoshop + ul {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -298,6 +378,10 @@ h6 {
 .article .article_content {
   margin-right: 4.5rem;
   margin-bottom: 4rem;
+}
+
+.article .article_content {
+  position: relative;
 }
 
 .article .col-flex_extern img {

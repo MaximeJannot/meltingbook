@@ -3,7 +3,7 @@ layout: article
 categories:
 - article
 - politique
-title: 'Terrorisme, l’équation cynique : les intérêts économiques au prix de la sécurité ?'
+title: 'Terrorisme, l’équation cynique : <br/>les intérêts économiques au prix de la sécurité ?'
 author: Anice Lajnef
 urlimg: http://www.meltingbook.com/wp-content/uploads/2017/05/Manchester-1-756x425.jpg
 ---

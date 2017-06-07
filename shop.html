@@ -1,0 +1,24 @@
+---
+layout: default
+title: Meltingbook
+---
+
+<section class="col-flex_primary list-shop">
+    {% for post in site.categories.shop %}
+        <article>
+            <a href=".{{post.url}}">
+                <img src="{{ post.urlimg }}" alt="" /><div>
+                    <h2>{{ post.title }}</h2>
+                    <p aria-hidden>—</p>
+                    <p>par<br/>{{ post.author }}</p> 
+                    <p aria-hidden>—</p>
+                    <p>{{ post.price }}</p>  
+                </div>
+            </a>
+        </article>
+    {% endfor %}
+</section>
+
+<section class="col-flex_secondary list-shopauthor">
+	
+</section>

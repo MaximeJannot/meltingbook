@@ -119,13 +119,14 @@ h6 {
 .menu > li,
 .article .next p,
 .article .previous p,
-.menu-aside li {
+.menu-aside li,
+.shop button {
   font-size: 1.6rem;
 }
 
-.list-article *,
-.list-portrait *,
-.list-keys * {
+.content .col-flex_primary *,
+.content .col-flex_secondary *,
+.list-keywords * {
   font-size: 1.25rem;
   line-height: 1.6rem;
   letter-spacing: .028rem;
@@ -262,7 +263,7 @@ h6 {
   }
 }
 
-/* Content */
+/* content global */
 .content .col-flex_primary {
   border-right: 2px solid #000;
   border-left: 2px solid #000;
@@ -279,51 +280,13 @@ h6 {
   max-height: calc(100vh - calc(1.8rem + 12px));
 }
 
-.content .list-article {
-  display: block;
-}
-
-.content .list-article a {
-  display: block;
-}
-
-.content .list-article a img {
-  display: inline-block;
-  width: 75%;
-  vertical-align: top;
-}
-
-.content .list-article a div {
-  display: inline-block;
-  width: calc(25% - .625rem);
-  padding-left: .625rem;
-  vertical-align: top;
-}
-
-.content .list-portrait article {
-  display: block;
-}
-
-.content .list-portrait article h2 {
-  width: 75%;
-}
-
-.content .list-article article,
-.content .list-portrait article {
+.content .col-flex_primary article,
+.content .col-flex_secondary article {
   position: relative;
   margin-top: .625rem;
   margin-bottom: .625rem;
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.content .list-keys li {
-  display: inline-block;
-}
-
-.content .list-keys li:not(:last-child):after {
-  display: inline-block;
-  content: '-';
 }
 
 .content .menu-aside li {
@@ -347,12 +310,93 @@ h6 {
   margin-bottom: 40px;
 }
 
+.content .list-keywords li {
+  display: inline-block;
+}
+
+.content .list-keywords li:not(:last-child):after {
+  display: inline-block;
+  content: '-';
+}
+
 @media screen and (max-width: 1300px) {
   .content .col-flex_extern {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
   }
+}
+
+/* home page */
+.home .col-flex_primary {
+  display: block;
+}
+
+.home .col-flex_primary a {
+  display: block;
+}
+
+.home .col-flex_primary a img {
+  display: inline-block;
+  width: 75%;
+  vertical-align: top;
+}
+
+.home .col-flex_primary a div {
+  display: inline-block;
+  width: calc(25% - .625rem);
+  padding-left: .625rem;
+  vertical-align: top;
+}
+
+.home .col-flex_secondary article {
+  display: block;
+}
+
+.home .col-flex_secondary article h2 {
+  width: 75%;
+}
+
+/* Shop */
+.shop .col-flex_primary {
+  display: block;
+}
+
+.shop .col-flex_primary article > a {
+  display: inline-block;
+  width: 60%;
+  text-align: right;
+  vertical-align: top;
+}
+
+.shop .col-flex_primary article > a + div {
+  display: inline-block;
+  width: calc(40% - .625rem);
+  padding-left: .625rem;
+  vertical-align: top;
+}
+
+.shop .col-flex_primary button {
+  margin-top: 5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.shop .col-flex_secondary article {
+  display: block;
+}
+
+.shop .col-flex_secondary article img {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+
+.shop .col-flex_secondary article img + div {
+  display: inline-block;
+  width: calc(50% - .625rem);
+  padding-left: .625rem;
+  vertical-align: top;
 }
 
 /* Article */
@@ -381,7 +425,24 @@ h6 {
 }
 
 .article .article_content {
+  line-height: 1.5;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article .article_content:before {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article .article_content div {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .article .col-flex_extern img {
@@ -426,24 +487,70 @@ h6 {
   vertical-align: bottom;
 }
 
-.article_content {
-  line-height: 1.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+/* Site sur fond noir */
+.darker {
+  color: white;
+  background-color: #000;
+    /* scrollbar */
+    /* border */
 }
 
-.article_content:before {
+.darker a {
+  color: white;
+}
+
+.darker .header .menu > li > a {
+  background-color: #000;
+}
+
+.darker button {
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #000;
+}
+
+.darker button:hover {
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.darker .menu-aside .logoshop {
+  position: relative;
+}
+
+.darker .menu-aside .logoshop img {
+  opacity: 0;
+}
+
+.darker .menu-aside .logoshop:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   content: '';
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  background-image: url('../../dist/img/logo-blanc.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.article_content div {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+.darker .ps:hover > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y,
+.darker .ps > .ps__scrollbar-y-rail > .ps__scrollbar-y {
+  background-color: #fff;
+}
+
+.darker .ps:hover > .ps__scrollbar-y-rail:hover {
+  background-color: #151515;
+}
+
+.darker .header .menu > li:not(:last-child),
+.darker .header .menu > li > a,
+.darker .content .col-flex_primary,
+.darker .content .col-flex_secondary {
+  border-color: #fff;
 }
 
 /* Custom scrollbar (surcharge)

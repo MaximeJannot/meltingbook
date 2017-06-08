@@ -2,13 +2,13 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Meltingbook</title>
+		<title>Livres - Meltingbook</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel='stylesheet' href='http://localhost:4000/components/perfect-scrollbar/css/perfect-scrollbar.min.css' />
 <link rel="stylesheet" href="http://localhost:4000/dist/css/reset.min.css">
 <link rel="stylesheet" href="http://localhost:4000/dist/css/style.min.css">
 	</head>
-	<body>
+	<body class="darker">
 		
 <header class="header" role="banner">
 	<nav role="navigation" aria-hidden="true">
@@ -24,8 +24,8 @@
 				</ul> -->
 			</li>
 			<li class="col-flex_primary">
-				<a href="http://localhost:4000">Actualités</a>
-				<ul class="submenu">
+				<a href="http://localhost:4000/shop.html">Livres</a>
+				<!-- <ul class="submenu">
 					<li><a href="#">société</a></li>
 					<li aria-hidden>—</li>
 					<li><a href="#">politique</a></li>
@@ -33,10 +33,10 @@
 					<li><a href="#">culture</a></li>
 					<li aria-hidden>—</li>
 					<li><a href="#">opinion</a></li>
-				</ul>
+				</ul> -->
 			</li>
 			<li class="col-flex_secondary">
-				<a href="#">Portraits</a>
+				<a href="#">Auteurs</a>
 			</li>
 			<li class="col-flex_extern">
 				<a href="#">Mots clefs</a>
@@ -45,14 +45,113 @@
 	</nav>
 </header>
 
-		<div class="content col-flex" role="main">
-			<section class="col-flex_primary list-shop">
-    
+		<div class="content shop col-flex" role="main">
+			<!-- Static pour la démo -->
+<!-- 
+    TODO 
+    - _post pour les articles
+    - _data  pour les infos des auteurs
+ -->
+
+<div class="col-flex_extern menu-aside">
+    <ul>
+        <li><a href="#">Articles</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">Podcasts</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">Vidéos</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">Évènements</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">Noms</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">MeltingBook Éditions</a></li>
+    </ul>
+    <a href="http://localhost:4000/shop.html" class="logoshop">
+        <img src="http://localhost:4000/dist/img/logo.png" alt="accéder à la boutique">
+    </a>
+    <ul>
+        <li><a href="#">infos</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">contacts</a></li>
+        <li aria-hidden>—</li>
+        <li><a href="#">mentions<br/>légales</a></li>
+    </ul>
+</div>
+
+<section class="col-flex_primary list-shop">
+    <article>
+        <a href="#">
+            <img src="../../dist/img/livre-shop-93370.png" alt="" /></a><div>
+                <a href="#">
+                    <h2>93 370 <br/>Les Bosquets, <br/>un ghetto <br/>français</h2>
+                    <p aria-hidden>—</p>
+                    <p>Jean-Riad Kechaou</p> 
+                    <p aria-hidden>—</p>
+                    <p>15 €</p>
+                </a>
+                <button>Acheter</button>  
+            </div>
+    </article>
+    <article>
+        <a href="#">
+            <img src="http://www.meltingbook.com/wp-content/uploads/2016/10/voilesetprejuges-367x500.jpg" alt="" /></a><div>
+                <a href="#">
+                    <h2>Voiles <br/>et préjugés</h2>
+                    <p aria-hidden>—</p>
+                    <p>Jean-Riad Kechaou</p> 
+                    <p aria-hidden>—</p>
+                    <p>15 €</p>
+                </a>
+                <button>Acheter</button>  
+            </div>
+    </article>
 </section>
 
 <section class="col-flex_secondary list-shopauthor">
-	
+	<article>
+        <a href="#">
+            <img src="../../dist/img/shop-auteur.jpg" alt="" /><div>
+                <h2>Jean-Riad <br/>Kechaou</h2>
+                <p aria-hidden>—</p>
+                <p>"Un prof <br/>sur le front"</p>
+            </div>
+        </a>
+    </article>
 </section>
+
+<div class="col-flex_extern list-keywords">
+    <ul>
+        <li><a href="#">Laïcité </a></li>
+        <li><a href="#">Todd Sheppard </a></li>
+        <li><a href="#">Primaires </a></li>
+        <li><a href="#">Fillon </a></li>
+        <li><a href="#">Macron </a></li>
+        <li><a href="#">Paris </a></li>
+        <li><a href="#">Législatives 2017 </a></li>
+        <li><a href="#">Voile </a></li>
+        <li><a href="#">Moralisation </a></li>
+        <li><a href="#">Terrorisme </a></li>
+        <li><a href="#">Henry Laurens </a></li>
+        <li><a href="#">FN </a></li>
+        <li><a href="#">Shlomo </a></li>
+        <li><a href="#">Sand </a></li>
+        <li><a href="#">Mont-fermeil </a></li>
+        <li><a href="#">Cité </a></li>
+        <li><a href="#">Débat public </a></li>
+        <li><a href="#">Déchéance </a></li>
+        <li><a href="#">Nationalité </a></li>
+        <li><a href="#">Vote </a></li>
+        <li><a href="#">Nadia </a></li>
+        <li><a href="#">Henni-Moulaï </a></li>
+        <li><a href="#">JR Kechaou  </a></li>
+        <li><a href="#">Handicap </a></li>
+        <li><a href="#">L’homme arabe </a></li>
+        <li><a href="#">Islam </a></li>
+        <li><a href="#">Bio </a></li>
+        <li><a href="#">Fonctionnaire </a></li>
+    </ul>
+</div>
 		</div>
 
 		<script src='http://localhost:4000/components/perfect-scrollbar/js/minify/perfect-scrollbar.min.js'></script>

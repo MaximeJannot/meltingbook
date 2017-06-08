@@ -91,17 +91,9 @@
 		max-width: 100%;
 		filter: grayscale(1);
 	    transition: all 0.3s ease-in-out;
-        // -webkit-filter: grayscale(1);
-        // -moz-filter: grayscale(1);
-        // -o-filter: grayscale(1);
-        // -ms-filter: grayscale(1);
 	}
 	a:hover img {
 		filter: grayscale(0);
-        // -webkit-filter: grayscale(0);
-        // -moz-filter: grayscale(0);
-        // -o-filter: grayscale(0);
-        // -ms-filter: grayscale(0);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -117,12 +109,13 @@
 	.menu > li,
 	.article .next p,
 	.article .previous p,
-	.menu-aside li {
+	.menu-aside li,
+	.shop button {
 		font-size: 1.6rem;
 	}
-	.list-article *,
-	.list-portrait *,
-	.list-keys * {
+	.content .col-flex_primary *,
+	.content .col-flex_secondary *,
+	.list-keywords * {
 		font-size: 1.25rem;
 		letter-spacing: 0.028rem;
 		line-height: 1.6rem;
@@ -225,7 +218,7 @@
 		}
 	}
 
-	/* Content */
+	/* content global */
 	.content {
 		.col-flex_primary {
 			border-left: 2px solid $primary-color;
@@ -240,48 +233,13 @@
 			min-height: calc(100vh - calc(1.8rem + 12px));
 		    max-height: calc(100vh - calc(1.8rem + 12px));
 		}
-
-		.list-article {
-			display: block;
-			a {
-				display: block;
-				img {
-					width: 75%;
-					display: inline-block;
-					vertical-align: top;
-				}
-				div {
-					width: calc(25% - 0.625rem);
-					display: inline-block;
-					vertical-align: top;
-					padding-left: 0.625rem;
-				}
-
-			}
-		}
-		.list-portrait {
-			article {
-				display: block;
-				h2 {
-					width: 75%;
-				}
-			} 
-		}
-		.list-article article,
-		.list-portrait article {
+		.col-flex_primary article,
+		.col-flex_secondary article {
 			position: relative;
 			padding-top: 0;
 			padding-bottom: 0;
 			margin-top: 0.625rem;
 			margin-bottom: 0.625rem;
-		}
-
-		.list-keys li {
-			display: inline-block;
-		}
-		.list-keys li:not(:last-child):after {
-			content: "-";
-			display: inline-block;
 		}
 
 		.menu-aside {
@@ -303,10 +261,88 @@
 			}
 		}
 
+		.list-keywords li {
+			display: inline-block;
+		}
+		.list-keywords li:not(:last-child):after {
+			content: "-";
+			display: inline-block;
+		}
+
 		@media screen and (max-width: 1300px) {
 			.col-flex_extern {
 				flex: 0;
 			}
+		}
+	}
+
+	/* home page */
+	.home {	
+		.col-flex_primary {
+			display: block;
+			a {
+				display: block;
+				img {
+					width: 75%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				div {
+					width: calc(25% - 0.625rem);
+					display: inline-block;
+					vertical-align: top;
+					padding-left: 0.625rem;
+				}
+
+			}
+		}
+		.col-flex_secondary {
+			article {
+				display: block;
+				h2 {
+					width: 75%;
+				}
+			} 
+		}
+	}
+
+	/* Shop */
+	.shop {
+		.col-flex_primary {
+			display: block;
+			article > a {
+				width: 60%;
+				display: inline-block;
+				vertical-align: top;
+				text-align: right;
+			}
+			article > a + div {
+				width: calc(40% - 0.625rem);
+				display: inline-block;
+				vertical-align: top;
+				padding-left: 0.625rem;
+			}
+			button {
+				margin-top: 5rem;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+		}
+		.col-flex_secondary {
+			article {
+				display: block;
+				img {
+					width: 50%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				img + div {
+					width: calc(50% - 0.625rem);
+					display: inline-block;
+					vertical-align: top;
+					padding-left: 0.625rem;
+				}
+			} 
 		}
 	}
 
@@ -334,6 +370,15 @@
 		}
 		.article_content {
 			position: relative;
+			display: flex;
+			line-height: 1.5;
+			&:before {
+				content: "";
+				flex: 1;
+			}
+			div {
+				flex: 3;
+			}
 		}
 
 		/* prev/next */
@@ -371,15 +416,63 @@
     		}
 		}
 	}
-	.article_content {
-		display: flex;
-		line-height: 1.5;
-		&:before {
-			content: "";
-			flex: 1;
+
+	/* Site sur fond noir */
+	.darker {
+		background-color: #000;
+		color: white;
+		a {
+			color: white;
 		}
-		div {
-			flex: 3;
+		.header .menu>li>a {
+			background-color: #000;
+		}
+
+		button {
+			color: #fff;
+			background-color: #000;
+			border: 1px solid #fff;
+			transition: all .1s ease-in-out;
+		}
+		button:hover {
+			color: #000;
+			background-color: #fff;
+			border: 1px solid #000;
+		}
+
+		.menu-aside .logoshop {
+			position: relative;
+			img {
+				opacity: 0;
+			}
+		}
+		.menu-aside .logoshop:before {
+			content: "";
+			background-image: url("../../dist/img/logo-blanc.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* scrollbar */
+		.ps:hover>.ps__scrollbar-y-rail:hover>.ps__scrollbar-y, 
+		.ps>.ps__scrollbar-y-rail>.ps__scrollbar-y {
+			background-color: #fff;
+		}
+		.ps:hover>.ps__scrollbar-y-rail:hover {
+		    background-color: #151515;
+		}
+
+		/* border */
+		.header .menu>li:not(:last-child),
+		.header .menu>li>a,
+		.content .col-flex_primary, 
+		.content .col-flex_secondary {
+			border-color: #fff;
 		}
 	}
 

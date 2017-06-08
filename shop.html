@@ -1,24 +1,56 @@
 ---
-layout: default
-title: Meltingbook
+layout: shop
+title: Livres - Meltingbook
 ---
 
+<!-- Static pour la démo -->
+<!-- 
+    TODO 
+    - _post pour les articles
+    - _data  pour les infos des auteurs
+ -->
+
+{% include menu-aside.html %}
+
 <section class="col-flex_primary list-shop">
-    {% for post in site.categories.shop %}
-        <article>
-            <a href=".{{post.url}}">
-                <img src="{{ post.urlimg }}" alt="" /><div>
-                    <h2>{{ post.title }}</h2>
+    <article>
+        <a href="#">
+            <img src="../../dist/img/livre-shop-93370.png" alt="" /></a><div>
+                <a href="#">
+                    <h2>93 370 <br/>Les Bosquets, <br/>un ghetto <br/>français</h2>
                     <p aria-hidden>—</p>
-                    <p>par<br/>{{ post.author }}</p> 
+                    <p>Jean-Riad Kechaou</p> 
                     <p aria-hidden>—</p>
-                    <p>{{ post.price }}</p>  
-                </div>
-            </a>
-        </article>
-    {% endfor %}
+                    <p>15 €</p>
+                </a>
+                <button>Acheter</button>  
+            </div>
+    </article>
+    <article>
+        <a href="#">
+            <img src="http://www.meltingbook.com/wp-content/uploads/2016/10/voilesetprejuges-367x500.jpg" alt="" /></a><div>
+                <a href="#">
+                    <h2>Voiles <br/>et préjugés</h2>
+                    <p aria-hidden>—</p>
+                    <p>Jean-Riad Kechaou</p> 
+                    <p aria-hidden>—</p>
+                    <p>15 €</p>
+                </a>
+                <button>Acheter</button>  
+            </div>
+    </article>
 </section>
 
 <section class="col-flex_secondary list-shopauthor">
-	
+	<article>
+        <a href="#">
+            <img src="../../dist/img/shop-auteur.jpg" alt="" /><div>
+                <h2>Jean-Riad <br/>Kechaou</h2>
+                <p aria-hidden>—</p>
+                <p>"Un prof <br/>sur le front"</p>
+            </div>
+        </a>
+    </article>
 </section>
+
+{% include keywords.html %}

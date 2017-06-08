@@ -40,6 +40,24 @@
 	a:active {
 		color: red
 	}
+	.article_content {
+		a {
+			text-decoration: underline;
+		}
+		h2 {
+			font-size: 1.8rem;
+			font-weight: bold;
+			line-height: normal;
+		}
+		h3 {
+			font-size: 1.5rem;
+			font-weight: bold;
+			line-height: normal;
+		}
+		p {
+			margin: 0.8em 0;
+		}
+	}
 
 	.share-twitter,
 	.share-facebook {
@@ -343,6 +361,10 @@
 					padding-left: 0.625rem;
 				}
 			} 
+		}
+
+		.menu-aside ul {
+			display: none;
 		}
 	}
 
